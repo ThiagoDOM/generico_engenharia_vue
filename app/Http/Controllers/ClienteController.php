@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClienteController extends Controller
 {
+
+    private function authid(){
+        return Auth::user()->id;
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -14,27 +20,22 @@ class ClienteController extends Controller
     
     public function index()
     {
-        //dd('teste');
-        //return Cliente::where('user_id', auth()->id())->get();
-        return Cliente::all();
+        
+        return Cliente::where('id_usuario',$this->authid())->get();
     }
 
     public function show($id)
     {
-        //dd('teste');
-        //return Cliente::where('user_id', auth()->id())->get();
+        
         return Cliente::find($id);
     }
 
     public function store(Request $request)
     {
         
-        //$Cliente = new Cliente();
-        //$Cliente = $request;
-        //$Cliente->user_id = auth()->id();
-        //$Cliente->save();
-
-        $cliente = Cliente::create($request->all());
+        $data = $request->all();
+        $data['id_usuario'] = $this->authid();
+        $cliente = Cliente::create($data);
 
         return $cliente;
     }
@@ -42,8 +43,6 @@ class ClienteController extends Controller
     public function update(Request $request, $id)
     {
         $Cliente = Cliente::find($id);
-        /*$Cliente->description = $request->description;
-        $Cliente->save();*/
 
         $data = $request->all();
 

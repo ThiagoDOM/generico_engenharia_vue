@@ -17,7 +17,9 @@
             </tr>
           </thead>
           <tbody>
+            
             <cliente-component
+              
               v-for="(cliente, index) in clientes"
               :key="cliente.id"
               :cliente="cliente"
@@ -26,6 +28,7 @@
               @form="modalEdit(index)"
             >
             </cliente-component>
+            
           </tbody>
         </table>
 

@@ -24,7 +24,12 @@ class CreateClientesTable extends Migration
             $table->string('nm_responsavel');
             $table->char('cpf',11);
             $table->string('celular',14);
+            $table->unsignedBigInteger('id_usuario');
             $table->timestamps();
+        });
+
+        Schema::table('clientes', function (Blueprint $table) {
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('index');
-});
+})->middleware(['auth']);
 
 require __DIR__.'/auth.php';
 

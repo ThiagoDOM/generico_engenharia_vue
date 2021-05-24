@@ -1072,7 +1072,7 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-(function webpackMissingModule() { throw new Error("Cannot find module \"C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\resources\\assets\\sass\\app.scss\""); }());
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
@@ -47208,6 +47208,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -48021,6 +48024,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-adbf1e4c", module.exports)
   }
 }
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: true is not a PostCSS plugin\n    at Processor.normalize (C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\postcss-loader\\node_modules\\postcss\\lib\\processor.js:145:15)\n    at new Processor (C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\postcss-loader\\node_modules\\postcss\\lib\\processor.js:51:25)\n    at postcss (C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\postcss-loader\\node_modules\\postcss\\lib\\postcss.js:73:10)\n    at C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\postcss-loader\\lib\\index.js:143:12\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19\n    at C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\Users\\thiag\\Documents\\alonso_engenharia_vue\\node_modules\\postcss-loader\\lib\\index.js:194:71\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)");
 
 /***/ })
 /******/ ]);
